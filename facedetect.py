@@ -10,6 +10,7 @@ import sys
 import cv2.cv as cv
 from optparse import OptionParser
 
+
 # Parameters for haar detection
 # From the API:
 # The default parameters (scale_factor=2, min_neighbors=3, flags=0) are tuned 
