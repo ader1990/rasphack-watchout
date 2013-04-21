@@ -82,9 +82,9 @@ def detect_and_draw(img, cascade):
     s_plane=cv.CreateImage(cv.GetSize(image), 8, 1)
     cv.CvtColor(image, hsv, cv.CV_RGB2HSV)
     cv.Split(hsv, h_plane, s_plane, None, None)
-    img=s_plane;
+    #img=s_plane;
 	
-	
+    mergi(0,0)
     if(cascade):
         t = cv.GetTickCount()
         faces = cv.HaarDetectObjects(small_img, cascade, cv.CreateMemStorage(0),
@@ -100,8 +100,9 @@ def detect_and_draw(img, cascade):
                 pt1 = (int(x * image_scale), int(y * image_scale))
                 pt2 = (int((x + w) * image_scale), int((y + h) * image_scale))
                 cv.Rectangle(img, pt1, pt2, cv.RGB(255, 0, 0), 3, 8, 0)
-    #else
-    #    mergi(0,0) 
+#        else
+#            mergi(0,0)
+       
     cv.ShowImage("result", img)
 
 if __name__ == '__main__':
