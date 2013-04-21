@@ -9,4 +9,6 @@ rasphack-watchout
    The mechanical part is linked to an Arduino development board. The communication between Raspberry PI and Arduino is done via SPI.
    The Arduino development board can control different analogic senzors, motors, actuators, GSM-GPRS device. 
    
+   
+   Usage: python pyfirmata/facedetect --cascade face.xml 0
 
